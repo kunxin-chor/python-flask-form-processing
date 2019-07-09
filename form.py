@@ -21,8 +21,12 @@ def process_form():
         return "Please accept our terms and conditions"
    
     activities = request.form.getlist('activities[]')
-    print(activities)
-    return "Name={}, message={}, spam={}, attribution={}".format(name, message,spam, attribution)
+    
+    return render_template('edit-form.html', first_name=name,
+        message=message, spam=spam, accept=accept, attribution=attribution,
+        activities = activities)
+        
+    
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':

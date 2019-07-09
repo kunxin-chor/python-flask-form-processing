@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <div class='form-group'>
+            <label>First Name:</label>
+            <input type='text' name="first_name">
+        </div>
+        <div class='form-group'>
+            <label>Message:</label>
+            <textarea name="message"></textarea>
+        </div>
+        <div class='form-group'>
+            <label>Do you want to us to spam you?</label>
+            <input type="radio" name="spam" value="true"/> Yes
+            <input type="radio" name="spam" value="false"/> No
+        </div>
+        <div class='form-group'>
+            <label>Please accept the terms and conditions:</label>
+            <input type="checkbox" name="accept"/>
+        </div>
+        <div class="form-group">
+            <label>Please indicate how you know about us:</label>
+            <select name='attribution'>
+                <option value="1">Newspaper</option>
+                <option value="2">Facebook</option>
+                <option value="3">Friends</option>
+                <option value="4">Others</option>
+            </select>
+        </div>
+        <div class='form-group'>
+            Please check all activities that interest you:
+            <br/>
+            <input type="checkbox" name="activities[]" value="swimming"></input>Swimming
+            <input type="checkbox" name="activities[]" value="badminton"></input>Badmintion
+            <input type="checkbox" name="activities[]" value="squash"></input>Squash
+            <input type="checkbox" name="activities[]" value="rock-climbing"></input>Rock Climbing  
+        </div>
+        <input type="submit"></input>
+    </form>
+</body>
+</html>

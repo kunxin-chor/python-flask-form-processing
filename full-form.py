@@ -14,15 +14,23 @@ def process_survey_form():
     first_name = request.form['first-name']
     last_name = request.form['last-name']
     
-    prefer_spicy = request.form['prefer-spicy']
+    if "prefer-spicy" in request.form:
+        prefer_spicy = request.form['prefer-spicy']
+    else:
+        prefer_spicy = None
     
     # we must request.form.getlist('<name attribute of the checkboxes>')
-    heard_about = request.form.getlist('heard-about')
+    if "heard-about" in request.form:
+        heard_about = request.form.getlist('heard-about')
+    else:
+        heard_about = []
     
     comments = request.form['comments']
   
+    occupation = request.form['occu']
+  
     return render_template("survey_results.template.html", fn=first_name, 
-        ln=last_name, ps=prefer_spicy, ha=heard_about, c=comments)
+        ln=last_name, ps=prefer_spicy, ha=heard_about, c=comments, o=occupation)
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':

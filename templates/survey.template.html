@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        <div>
+            <label>First Name:</label>
+            <input type='text' name='first-name'/>
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <input type='text' name='last-name'/>
+        </div>
+        <div>
+            <p>Do you prefer spicy or non-spicy food</p>
+            <input type='radio' name='prefer-spicy' value='spicy'/><label>Spicy</label>
+            <input type='radio' name='prefer-spicy' value='non-spicy'/><label>Non-spicy</label>
+        </div>
+        <div>
+            <p>How did you hear about us? Please check all applies:</p>
+            <input type='checkbox' name='heard-about' value='word-of-mouth'>
+            <label>Word of Mouth</label>
+            
+            <br/>
+            
+            <input type='checkbox' name='heard-about' value='advertisement'>
+            <label>Advertisement</label>
+            
+            <br/>
+            
+            <input type='checkbox' name='heard-about' value='newspaper'>
+            <label>Newspaper</label>
+            
+            <br/>
+            
+            <input type='checkbox' name='heard-about' value='others'>
+            <label>Others</label>
+            
+            <div>
+                Any other comments:<textarea name='comments'></textarea>
+            </div>
+            
+        </div>
+        <input type='submit' value='Send'/>
+    </form>
+</body>
+</html>
